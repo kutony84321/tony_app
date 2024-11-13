@@ -69,7 +69,7 @@ class _NewsDetailScreenState extends State<NewsDetailScreen> {
                         horizontal: 13.0, vertical: 3.0),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      color: const Color(0xffe60412),
+                      color: Theme.of(context).primaryColor,
                     ),
                     child: Text(
                       sources.newshead,

@@ -37,11 +37,6 @@ class _LayoutState extends State<Layout> {
       body: getScreen[_selectedIndex],
       bottomNavigationBar: Container(
         decoration: const BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              color: Color.fromARGB(255, 255, 0, 0),
-            ),
-          ],
           border: Border(
               top: BorderSide(color: Color.fromARGB(255, 223, 143, 143))),
         ),
@@ -56,10 +51,7 @@ class _LayoutState extends State<Layout> {
             BottomNavigationBarItem(icon: Icon(Icons.live_tv), label: "直播"),
           ],
           currentIndex: _selectedIndex,
-          fixedColor: const Color(0xffe60412),
           onTap: _onItemTapped,
-          selectedFontSize: 15.0,
-          unselectedFontSize: 15.0,
         ),
       ),
     );

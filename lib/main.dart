@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // ignore: unused_import
 import 'views/screens/layout.dart';
+import 'style.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,9 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: '非凡新聞',
-      theme: ThemeData(
-        useMaterial3: true,
-      ),
+      theme: themeData,
       home: const Layout(),
     );
   }

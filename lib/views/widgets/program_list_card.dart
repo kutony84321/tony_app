@@ -85,7 +85,7 @@ class ProgramListCard extends StatelessWidget {
                                   padding: const EdgeInsets.symmetric(
                                       horizontal: 8, vertical: 4),
                                   decoration: BoxDecoration(
-                                      color: const Color(0xffe60412),
+                                      color: Theme.of(context).primaryColor,
                                       borderRadius: BorderRadius.circular(14)),
                                   child: Text(video.program_name,
                                       style: const TextStyle(

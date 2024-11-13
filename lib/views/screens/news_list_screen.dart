@@ -193,25 +193,10 @@ class _NewsListScreenState extends State<NewsListScreen>
         appBar: AppBar(
             automaticallyImplyLeading: false,
             title: Text(widget.title),
-            centerTitle: true,
-            backgroundColor: Colors.white,
-            titleTextStyle: const TextStyle(
-              color: Color(0xff200e0c),
-              fontSize: 20.0,
-              fontWeight: FontWeight.w700,
-            ),
             bottom: TabBar(
               controller: tabController,
               tabAlignment: TabAlignment.start,
               isScrollable: true,
-              indicatorColor: const Color(0xffe60412),
-              labelStyle: const TextStyle(
-                fontSize: 18.0,
-                color: Color(0xffe60412),
-                fontWeight: FontWeight.w700,
-              ),
-              unselectedLabelStyle:
-                  const TextStyle(fontWeight: FontWeight.w400),
               tabs: tabsList.map((e) => Tab(text: e['name'])).toList(),
             )),
         body: Column(
@@ -313,8 +298,9 @@ class _NewsListScreenState extends State<NewsListScreen>
                                                                       13,
                                                                   vertical: 3),
                                                           decoration: BoxDecoration(
-                                                              color: const Color(
-                                                                  0xffe60412),
+                                                              color: Theme.of(
+                                                                      context)
+                                                                  .primaryColor,
                                                               borderRadius:
                                                                   BorderRadius
                                                                       .circular(

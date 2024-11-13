@@ -5,6 +5,7 @@ import 'package:app_new/models/program_group_video.dart';
 import 'package:app_new/repository/program_group_video.dart';
 import 'package:app_new/views/widgets/program_list_card.dart';
 import 'package:app_new/views/screens/program_detail_screen.dart';
+import 'package:app_new/views/screens/food_home_screen.dart';
 
 class ProgramScreen extends StatefulWidget {
   const ProgramScreen({super.key, required this.title});
@@ -118,14 +119,6 @@ class _ProgramScreenState extends State<ProgramScreen>
                     controller: programTabController,
                     tabAlignment: TabAlignment.start,
                     isScrollable: true,
-                    indicatorColor: const Color(0xffe60412),
-                    labelStyle: const TextStyle(
-                      fontSize: 18.0,
-                      color: Color(0xffe60412),
-                      fontWeight: FontWeight.w700,
-                    ),
-                    unselectedLabelStyle:
-                        const TextStyle(fontWeight: FontWeight.w400),
                     tabs: programType
                         .map((e) => Tab(text: e.group_name))
                         .toList(),
@@ -188,6 +181,24 @@ class _ProgramScreenState extends State<ProgramScreen>
                   Navigator.push(context, MaterialPageRoute(
                       //fullscreenDialog: true,
                       builder: (context) {
+                    return const FoodHomeScreen(
+                      title: '大探索',
+                    );
+                  }));
+                  /*
+                  Navigator.pushReplacement<void, void>(
+                    context,
+                    MaterialPageRoute<void>(
+                      builder: (BuildContext context) => const FoodHomeScreen(
+                        title: '大探索',
+                      ),
+                    ),
+                  );*/
+                  /*Navigator.push(context, MaterialPageRoute(
+                      //fullscreenDialog: true,
+                      builder: (context) {
+
+                    
                     return const ProgramDetailScreen(
                       program_item: {
                         "program_id": 7,
@@ -205,7 +216,7 @@ class _ProgramScreenState extends State<ProgramScreen>
                         }
                       },
                     );
-                  }));
+                  }));*/
                 })
           ],
         ),
